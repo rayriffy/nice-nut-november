@@ -1,4 +1,4 @@
-import React, { Fragment, FunctionComponent, useEffect, useState } from 'react'
+import { Fragment, FunctionComponent, useEffect, useState, memo } from 'react'
 
 import Image from 'next/image'
 
@@ -16,7 +16,7 @@ interface Props {
   }[]
 }
 
-export const SelectionRenderer: FunctionComponent<Props> = props => {
+export const SelectionRenderer: FunctionComponent<Props> = memo(props => {
   const { year, selections } = props
 
   const [debug, setDebug] = useState<boolean>(
@@ -107,4 +107,4 @@ export const SelectionRenderer: FunctionComponent<Props> = props => {
       </div>
     </Fragment>
   )
-}
+})

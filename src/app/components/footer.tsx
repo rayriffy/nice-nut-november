@@ -1,6 +1,6 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, memo } from 'react'
 
-export const AppFooter: FunctionComponent = props => {
+export const AppFooter: FunctionComponent = memo(props => {
   return (
     <footer className="bg-white">
       <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
@@ -38,7 +38,7 @@ export const AppFooter: FunctionComponent = props => {
             </svg>
           </a>
           <a
-            href="https://github.com/rayriffy/nice-nut-november"
+            href="https://github.com/rayriffy"
             className="text-gray-400 hover:text-gray-500"
           >
             <span className="sr-only">GitHub</span>
@@ -64,4 +64,4 @@ export const AppFooter: FunctionComponent = props => {
       </div>
     </footer>
   )
-}
+})

@@ -1,4 +1,4 @@
-import { FunctionComponent, useState, useCallback } from 'react'
+import { FunctionComponent, useState, useCallback, memo } from 'react'
 
 import Link from 'next/link'
 
@@ -10,7 +10,7 @@ import { Home } from '../../core/components/icons/home'
 import { InformationCircle } from '../../core/components/icons/informationCircle'
 import { Archive } from '../../core/components/icons/archive'
 
-export const AppHeader: FunctionComponent = props => {
+export const AppHeader: FunctionComponent = memo(props => {
   const [menuShow, setMenuShow] = useState<boolean>(false)
   const toggleMenuShow = useCallback(() => setMenuShow(o => !o), [])
 
@@ -182,4 +182,4 @@ export const AppHeader: FunctionComponent = props => {
       </Transition>
     </div>
   )
-}
+})
