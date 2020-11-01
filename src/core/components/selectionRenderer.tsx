@@ -99,6 +99,7 @@ export const SelectionRenderer: FunctionComponent<Props> = memo(props => {
                   src={selection.gallery.cover.src}
                   width={selection.gallery.cover.w}
                   height={selection.gallery.cover.h}
+                  alt="cover"
                 />
               </a>
             </div>
