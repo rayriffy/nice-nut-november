@@ -6,19 +6,27 @@ import { Transition } from '@headlessui/react'
 
 import { Menu } from '../../core/components/icons/menu'
 import { X } from '../../core/components/icons/x'
+import { Home } from '../../core/components/icons/home'
+import { InformationCircle } from '../../core/components/icons/informationCircle'
 
 export const AppHeader: FunctionComponent = props => {
   const [menuShow, setMenuShow] = useState<boolean>(false)
   const toggleMenuShow = useCallback(() => setMenuShow(o => !o), [])
+
+  const [shorthand, setShorthand] = useState<boolean>(false)
+  const toggleShorthand = useCallback(() => setShorthand(o => !o), [])
 
   return (
     <div className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="lg:w-0 lg:flex-1 lg:flex">
-            <a href="#" className="flex">
-              <span className="font-bold text-2xl">Nice Nut November</span>
-            </a>
+            <button
+              className="font-bold text-2xl text-gray-800 cursor-pointer"
+              onClick={toggleShorthand}
+            >
+              {shorthand ? 'NNN' : 'Nice Nut November'}
+            </button>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <button
@@ -46,15 +54,15 @@ export const AppHeader: FunctionComponent = props => {
           </nav>
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
             <a
-              href="#"
+              href="https://next.h.rayriffy.com"
               className="whitespace-no-wrap text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
             >
               Riffy H (alpha)
             </a>
             <span className="inline-flex rounded-md shadow-sm">
               <a
-                href="#"
-                className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                href="https://h.rayriffy.com"
+                className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
               >
                 Riffy H
               </a>
@@ -78,11 +86,12 @@ export const AppHeader: FunctionComponent = props => {
               <div className="pt-5 pb-6 px-5 space-y-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                      alt="Workflow"
-                    />
+                    <button
+                      className="font-bold text-2xl text-gray-800"
+                      onClick={toggleShorthand}
+                    >
+                      {shorthand ? 'NNN' : 'Nice Nut November'}
+                    </button>
                   </div>
                   <div className="-mr-2">
                     <button
@@ -95,75 +104,56 @@ export const AppHeader: FunctionComponent = props => {
                     </button>
                   </div>
                 </div>
-                <div></div>
+                <div>
+                  <nav className="grid grid-cols-1 gap-7">
+                    <Link href="/">
+                      <a className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                          <Home className="h-6 w-6" />
+                        </div>
+                        <div className="text-base leading-6 font-medium text-gray-900">
+                          Home
+                        </div>
+                      </a>
+                    </Link>
+                    <Link href="/about">
+                      <a className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                          <InformationCircle className="h-6 w-6" />
+                        </div>
+                        <div className="text-base leading-6 font-medium text-gray-900">
+                          About
+                        </div>
+                      </a>
+                    </Link>
+                  </nav>
+                </div>
               </div>
               <div className="py-6 px-5 space-y-6">
-                <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+                {/* <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                   <a
                     href="#"
                     className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                   >
-                    Pricing
+                    About
                   </a>
-                  <a
-                    href="#"
-                    className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                  >
-                    Docs
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                  >
-                    Enterprise
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                  >
-                    Blog
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                  >
-                    Help Center
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                  >
-                    Guides
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                  >
-                    Security
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                  >
-                    Events
-                  </a>
-                </div>
+                </div> */}
                 <div className="space-y-6">
                   <span className="w-full flex rounded-md shadow-sm">
                     <a
-                      href="#"
-                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                      href="https://h.rayriffy.com"
+                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
                     >
-                      Sign up
+                      Riffy H
                     </a>
                   </span>
                   <p className="text-center text-base leading-6 font-medium text-gray-500">
-                    Existing customer?
+                    Liveing on the edge?
                     <a
-                      href="#"
-                      className="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
+                      href="https://next.h.rayriffy.com"
+                      className="ml-1 text-blue-600 hover:text-blue-500 transition ease-in-out duration-150"
                     >
-                      Sign in
+                      Try my alpha version
                     </a>
                   </p>
                 </div>
