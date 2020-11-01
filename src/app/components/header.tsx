@@ -8,6 +8,7 @@ import { Menu } from '../../core/components/icons/menu'
 import { X } from '../../core/components/icons/x'
 import { Home } from '../../core/components/icons/home'
 import { InformationCircle } from '../../core/components/icons/informationCircle'
+import { Archive } from '../../core/components/icons/archive'
 
 export const AppHeader: FunctionComponent = props => {
   const [menuShow, setMenuShow] = useState<boolean>(false)
@@ -42,6 +43,13 @@ export const AppHeader: FunctionComponent = props => {
             <Link href="/">
               <a className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                 Home
+              </a>
+            </Link>
+          </nav>
+          <nav className="hidden md:flex space-x-10">
+            <Link href="/archive">
+              <a className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                Archives
               </a>
             </Link>
           </nav>
@@ -113,6 +121,16 @@ export const AppHeader: FunctionComponent = props => {
                         </div>
                         <div className="text-base leading-6 font-medium text-gray-900">
                           Home
+                        </div>
+                      </a>
+                    </Link>
+                    <Link href="/archive">
+                      <a className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                          <Archive className="h-6 w-6" />
+                        </div>
+                        <div className="text-base leading-6 font-medium text-gray-900">
+                          Archives
                         </div>
                       </a>
                     </Link>
