@@ -4,6 +4,9 @@ import { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
+import { AppHeader } from '../app/components/header'
+import { AppFooter } from '../app/components/footer'
+
 import '../styles/tailwind.css'
 
 const NextApp: NextPage<AppProps> = props => {
@@ -40,7 +43,11 @@ const NextApp: NextPage<AppProps> = props => {
           content="https://nnn.rayriffy.com/og.jpg"
         />
       </Head>
-      <Component {...pageProps} />
+      <AppHeader />
+      <main className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:px-8 min-h-full">
+        <Component {...pageProps} />
+      </main>
+      <AppFooter />
     </Fragment>
   )
 }
