@@ -57,7 +57,7 @@ export const AppHeader: FunctionComponent = props => {
               href="https://next.h.rayriffy.com"
               className="whitespace-no-wrap text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
             >
-              Riffy H (alpha)
+              Try alpha
             </a>
             <span className="inline-flex rounded-md shadow-sm">
               <a
