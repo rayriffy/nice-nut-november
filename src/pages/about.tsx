@@ -2,6 +2,8 @@ import { GetStaticProps, NextPage } from 'next'
 
 import Markdown from 'markdown-to-jsx'
 
+import { HeadTitle } from '../core/components/headTitle'
+
 interface Props {
   md: string
 }
@@ -9,6 +11,7 @@ interface Props {
 const Page: NextPage<Props> = props => {
   return (
     <div className="prose mx-auto">
+      <HeadTitle title="About" />
       <Markdown children={props.md} />
     </div>
   )

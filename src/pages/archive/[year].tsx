@@ -1,6 +1,9 @@
+import { Fragment } from 'react'
+
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import { SelectionRenderer } from '../../core/components/selectionRenderer'
+import { HeadTitle } from '../../core/components/headTitle'
 
 import { EssentialHentai } from '../../core/@types/EssentialHentai'
 
@@ -13,7 +16,12 @@ interface Props {
 }
 
 const Page: NextPage<Props> = props => {
-  return <SelectionRenderer {...props} />
+  return (
+    <Fragment>
+      <HeadTitle title={props.year.toString()} />
+      <SelectionRenderer {...props} />
+    </Fragment>
+  )
 }
 
 export const getStaticProps: GetStaticProps<Props> = async context => {

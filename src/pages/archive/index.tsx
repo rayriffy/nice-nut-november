@@ -3,6 +3,8 @@ import { Fragment } from 'react'
 import { GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
 
+import { HeadTitle } from '../../core/components/headTitle'
+
 interface Props {
   currentYear: number
   year: number[]
@@ -13,6 +15,7 @@ const Page: NextPage<Props> = props => {
 
   return (
     <Fragment>
+      <HeadTitle title="Archives" />
       <h1 className="text-4xl font-bold pb-6 font-gray-800">Archives</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 items-center">
         <div className="col-span-1">
