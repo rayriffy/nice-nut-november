@@ -11,4 +11,5 @@ export interface EssentialHentai {
     h: number
   }
   tags: [TagType, string][]
+  page: number
 }

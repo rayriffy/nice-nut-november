@@ -9,6 +9,9 @@ module.exports = withPlugins([], {
   future: {
     excludeDefaultMomentLocales: true,
   },
+  images: {
+    domains: ['t.nhentai.net'],
+  },
   experimental: {
     modern: true,
     polyfillsOptimization: true,

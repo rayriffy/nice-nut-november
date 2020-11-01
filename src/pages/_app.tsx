@@ -44,7 +44,7 @@ const NextApp: NextPage<AppProps> = props => {
         />
       </Head>
       <AppHeader />
-      <main className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:px-8 min-h-full">
+      <main className="max-w-screen-xl mx-auto py-6 px-4 sm:px-6 lg:px-8 min-h-full">
         <Component {...pageProps} />
       </main>
       <AppFooter />

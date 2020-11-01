@@ -16,4 +16,5 @@ export const getOnlyEssentials = (raw: RawHentai): EssentialHentai => ({
     h: raw.images.cover.h,
   },
   tags: raw.tags.map(tag => [tag.type, tag.name]),
+  page: raw.num_pages,
 })
