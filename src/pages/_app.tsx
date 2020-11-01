@@ -29,7 +29,7 @@ const NextApp: NextPage<AppProps> = props => {
           property="og:description"
           content="Why do you need to hold yourself? Enjoy out nice selection, release daily on November"
         />
-        <meta property="og:image" content="https://nnn.rayriffy.com/og.jpg" />
+        <meta property="og:image" content="https://nnn.rayriffy.com/og2.jpg" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://nnn.rayriffy.com/" />
@@ -40,7 +40,7 @@ const NextApp: NextPage<AppProps> = props => {
         />
         <meta
           property="twitter:image"
-          content="https://nnn.rayriffy.com/og.jpg"
+          content="https://nnn.rayriffy.com/og2.jpg"
         />
 
         <link
