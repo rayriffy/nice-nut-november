@@ -163,7 +163,7 @@ export const AppHeader: FunctionComponent = memo(props => {
                     </a>
                   </span>
                   <p className="text-center text-base leading-6 font-medium text-gray-500">
-                    Liveing on the edge?
+                    Living on the edge?
                     <a
                       href="https://next.h.rayriffy.com"
                       className="ml-1 text-blue-600 hover:text-blue-500 transition ease-in-out duration-150"
