@@ -1,8 +1,8 @@
-import { Fragment } from 'react'
-
 import { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+
+import { Context } from '../store'
 
 import { AppHeader } from '../app/components/header'
 import { AppFooter } from '../app/components/footer'
@@ -13,7 +13,7 @@ const NextApp: NextPage<AppProps> = props => {
   const { Component, pageProps } = props
 
   return (
-    <Fragment>
+    <Context>
       <Head>
         <title>Nice Nut November</title>
         <meta name="title" content="Nice Nut November" />
@@ -72,7 +72,7 @@ const NextApp: NextPage<AppProps> = props => {
         <Component {...pageProps} />
       </main>
       <AppFooter />
-    </Fragment>
+    </Context>
   )
 }
 

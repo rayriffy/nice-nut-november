@@ -9,6 +9,7 @@ import { X } from '../../core/components/icons/x'
 import { Home } from '../../core/components/icons/home'
 import { InformationCircle } from '../../core/components/icons/informationCircle'
 import { Archive } from '../../core/components/icons/archive'
+import { BlurSwitch } from './blurSwitch'
 
 export const AppHeader: FunctionComponent = memo(props => {
   const [menuShow, setMenuShow] = useState<boolean>(false)
@@ -61,6 +62,7 @@ export const AppHeader: FunctionComponent = memo(props => {
             </Link>
           </nav>
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
+            <BlurSwitch />
             <a
               href="https://next.h.rayriffy.com"
               className="whitespace-no-wrap text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
@@ -88,7 +90,7 @@ export const AppHeader: FunctionComponent = memo(props => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50">
           <div className="rounded-lg shadow-lg">
             <div className="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5 space-y-6">
@@ -148,14 +150,9 @@ export const AppHeader: FunctionComponent = memo(props => {
                 </div>
               </div>
               <div className="py-6 px-5 space-y-6">
-                {/* <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                  <a
-                    href="#"
-                    className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                  >
-                    About
-                  </a>
-                </div> */}
+                <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+                  <BlurSwitch />
+                </div>
                 <div className="space-y-6">
                   <span className="w-full flex rounded-md shadow-sm">
                     <a

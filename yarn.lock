@@ -1147,6 +1147,16 @@
   dependencies:
     mkdirp "^1.0.4"
 
+"@storeon/crosstab@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@storeon/crosstab/-/crosstab-1.0.2.tgz#72f1bb838347214f0394af6daf46ff4e95787487"
+  integrity sha512-UKzJpJaJA12B9kc98MDfZ1Hh3M9HNAMSfgpjNHdg1JgZAHrmN6nXxaDsIlJYgSASND7IOoT/Q8yJB4uwTTodzA==
+
+"@storeon/localstorage@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@storeon/localstorage/-/localstorage-1.2.0.tgz#0ffcc5c0e270c908725bb337ff02e9e0877c6c84"
+  integrity sha512-GcUG67wzYEZmDZoG1gxSjGTaN9wk2P4FPffqkcHoUk/As4OawpQ91f5Z0pMaAG4o8GGe9cmoT7+dn3SqUPqUNg==
+
 "@tailwindcss/custom-forms@^0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@tailwindcss/custom-forms/-/custom-forms-0.2.1.tgz#40e5ed1fff6d29d8ed1c508a0b2aaf8da96962e0"
@@ -5426,6 +5436,11 @@ static-extend@^0.1.1:
   dependencies:
     define-property "^0.2.5"
     object-copy "^0.1.0"
+
+storeon@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/storeon/-/storeon-3.1.1.tgz#7ecb94e7c546eacaf973e70268e1dd5ace30826c"
+  integrity sha512-rThlNtK0GeOKh2tUgAuh1W9fYeD8I9DKIptdxV0WYUJdMucb4bFUKzfqpimCHOJ2eK+ix86J/UetwoeDx+dpTQ==
 
 stream-browserify@3.0.0:
   version "3.0.0"
