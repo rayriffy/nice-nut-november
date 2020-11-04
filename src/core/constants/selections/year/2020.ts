@@ -19,7 +19,6 @@ export const year2020: Selection[] = [
     timestamp: moment('2020-11-04'),
     code: 92485,
   },
-  ,
   {
     timestamp: moment('2020-11-05'),
     code: 254228,
