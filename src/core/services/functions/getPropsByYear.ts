@@ -11,9 +11,10 @@ export const getPropsByYear = async (year: number | string) => {
       .filter(selection => selection.timestamp.get('year') === targetYear)
       .map(async selection => {
         const rawHentai = await getRawHentai(selection.code)
+        console.log(rawHentai)
         return {
           date: selection.timestamp.get('date'),
-          gallery: getOnlyEssentials(rawHentai),
+          gallery: getOnlyEssentials(rawHentai.response.data),
         }
       })
   )
