@@ -43,4 +43,16 @@ export const year2020: Selection[] = [
     timestamp: moment('2020-11-10'),
     code: 243685,
   },
+  {
+    timestamp: moment('2020-11-11'),
+    code: 335496,
+  },
+  {
+    timestamp: moment('2020-11-12'),
+    code: 335278,
+  },
+  {
+    timestamp: moment('2020-11-13'),
+    code: 275847,
+  },
 ]
