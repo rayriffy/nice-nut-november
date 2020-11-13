@@ -63,12 +63,6 @@ export const AppHeader: FunctionComponent = memo(props => {
           </nav>
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
             <BlurSwitch />
-            <a
-              href="https://next.h.rayriffy.com"
-              className="whitespace-no-wrap text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
-            >
-              Try alpha
-            </a>
             <span className="inline-flex rounded-md shadow-sm">
               <a
                 href="https://h.rayriffy.com"
@@ -162,15 +156,6 @@ export const AppHeader: FunctionComponent = memo(props => {
                       Riffy H
                     </a>
                   </span>
-                  <p className="text-center text-base leading-6 font-medium text-gray-500">
-                    Living on the edge?
-                    <a
-                      href="https://next.h.rayriffy.com"
-                      className="ml-1 text-blue-600 hover:text-blue-500 transition ease-in-out duration-150"
-                    >
-                      Try my alpha version
-                    </a>
-                  </p>
                 </div>
               </div>
             </div>

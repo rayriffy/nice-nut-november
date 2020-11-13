@@ -24,7 +24,7 @@ export const Poster: FunctionComponent<Props> = memo(props => {
           {selection.date} November
         </div>
         <a
-          href={`https://next.h.rayriffy.com/g/${selection.gallery.id}`}
+          href={`https://h.rayriffy.com/g/${selection.gallery.id}`}
           target="_blank"
           rel="noopener noreferrer"
         >
