@@ -43,10 +43,11 @@ export const SelectionRenderer: FunctionComponent<Props> = memo(props => {
         </span>
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        {selections.map(selection => (
+        {selections.map((selection, i) => (
           <Poster
             key={`poster-${selection.gallery.id}`}
             selection={selection}
+            priority={i < 5}
           />
         ))}
       </div>

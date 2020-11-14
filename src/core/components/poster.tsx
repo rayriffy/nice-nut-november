@@ -8,6 +8,7 @@ import { EssentialHentai } from '../@types/EssentialHentai'
 import { ImageBlur } from './imageBlur'
 
 interface Props {
+  priority?: boolean
   selection: {
     date: number
     gallery: EssentialHentai
@@ -15,7 +16,7 @@ interface Props {
 }
 
 export const Poster: FunctionComponent<Props> = memo(props => {
-  const { selection } = props
+  const { selection, priority } = props
 
   return (
     <div className="col-span-1">
@@ -65,6 +66,7 @@ export const Poster: FunctionComponent<Props> = memo(props => {
               width={selection.gallery.cover.w}
               height={selection.gallery.cover.h}
               alt="cover"
+              priority={priority}
             />
           </div>
         </a>
