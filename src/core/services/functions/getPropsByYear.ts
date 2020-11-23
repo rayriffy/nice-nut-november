@@ -5,6 +5,7 @@ export const getPropsByYear = async (year: number | string) => {
   const { getRawHentai } = await import('./getRawHentai')
   const { getOnlyEssentials } = await import('./getOnlyEssentials')
 
+  const targetYear = Number(year as string)
   const filteredSelections = selections.filter(
     selection => selection.timestamp.get('year') === targetYear
   )
@@ -17,8 +18,6 @@ export const getPropsByYear = async (year: number | string) => {
       throw new Error(`${section.code} is duplicated! Stoping...`)
     }
   })
-
-  const targetYear = Number(year as string)
   const allSelectionsByTargetYear = await Promise.all(
     filteredSelections.map(async selection => {
       const rawHentai = await getRawHentai(selection.code)
