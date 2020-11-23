@@ -5,17 +5,28 @@ export const getPropsByYear = async (year: number | string) => {
   const { getRawHentai } = await import('./getRawHentai')
   const { getOnlyEssentials } = await import('./getOnlyEssentials')
 
+  const filteredSelections = selections.filter(
+    selection => selection.timestamp.get('year') === targetYear
+  )
+
+  // fail on dupes
+  filteredSelections.map(section => {
+    const checkFilter = selections.filter(o => o.code === section.code)
+
+    if (checkFilter.length !== 1) {
+      throw new Error(`${section.code} is duplicated! Stoping...`)
+    }
+  })
+
   const targetYear = Number(year as string)
   const allSelectionsByTargetYear = await Promise.all(
-    selections
-      .filter(selection => selection.timestamp.get('year') === targetYear)
-      .map(async selection => {
-        const rawHentai = await getRawHentai(selection.code)
-        return {
-          date: selection.timestamp.get('date'),
-          gallery: getOnlyEssentials(rawHentai.response.data),
-        }
-      })
+    filteredSelections.map(async selection => {
+      const rawHentai = await getRawHentai(selection.code)
+      return {
+        date: selection.timestamp.get('date'),
+        gallery: getOnlyEssentials(rawHentai.response.data),
+      }
+    })
   )
 
   return sortBy(allSelectionsByTargetYear, 'date').reverse()
